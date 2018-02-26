@@ -121,4 +121,6 @@ body.impress-on-Sponsor div.footer {
 #Path {
     font-size: 2em;
 }
-
+.strike {
+    text-decoration: line-through;
+}

@@ -152,17 +152,26 @@ Live Demo
 
 .. note::
 
-    mkdir live
-    cd live
+    mkdir live && cd live
+
+    cp ../one_i_made_earlier/demo.py demo.py
+
     pipenv install cowsay
+
     cat Pipfile
+
     vim Pipfile.lock
+
     pipenv run ./demo.py
+
     pipenv shell
+
     pipenv --help # to see --site-packages
+
     pipenv --rm  # remove the venv
 
     pipenv install --dev pipenv==10.1.0
+
     pipenv graph
 
 ----
@@ -392,6 +401,19 @@ JavaScript
 
 My conclusions
 ==============
+
+.. class:: strike
+
+``pip freeze``
+
+.. class:: strike
+
+``setup.py install``
+
+
+Ansible
+
+``pipenv``
 
 .. note::
 
