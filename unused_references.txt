@@ -1,0 +1,15 @@
+https://github.com/mitsuhiko/pipsi
+
+https://docs.python.org/3/tutorial/venv.html
+
+Requests philosophy
+http://docs.python-requests.org/en/latest/dev/philosophy/
+
+31 minutes:
+https://www.youtube.com/watch?v=fq1JhB1nK60
+42 minutes:
+https://www.youtube.com/watch?v=rR8F_Uaf9_I
+
+`Kenneth Reitz Screencast <https://www.youtube.com/watch?v=RJUT6DfwZMc>`__
+
+.. vim: ft=rst

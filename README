@@ -1,0 +1,35 @@
+Build the presentation with::
+
+    inotify.sh hovercraft talk.txt ~/.Downloads/
+
+In another terminal::
+
+    cd ~/.Downloads && reload
+
+Then browse to http://localhost:8080/
+
+To get scaling working without problems edit
+``hovercraft/templates/simple/template.xsl`` to include ``data-width`` and
+``data-height`` similarly to ``data-perspective`` which was implemented in
+https://github.com/regebro/hovercraft/pull/75
+
+.. code::
+
+      <div id="impress">
+        <xsl:if test="@data-perspective">
+          <xsl:attribute name="data-perspective">
+            <xsl:value-of select="@data-perspective" />
+          </xsl:attribute>
+        </xsl:if>
+        <xsl:if test="@data-width">
+          <xsl:attribute name="data-width">
+            <xsl:value-of select="@data-width" />
+          </xsl:attribute>
+        </xsl:if>
+        <xsl:if test="@data-height">
+          <xsl:attribute name="data-height">
+            <xsl:value-of select="@data-height" />
+          </xsl:attribute>
+        </xsl:if>
+
+.. vim: ft=rst

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+body {
+    font-family: 'Arimo', sans-serif;
+    font-size: 200%;
+}
+.heading {
+    font-weight: bold;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 1em;
+    font-size: 0.5em;
+    font-style: italic;
+}
+blockquote {
+    font-style: italic;
+}
+.photo {
+    display: flex;
+    justify-content: space-between;
+}
+.photo p {
+    margin-top: 0;
+}
+#Marketing img {
+    width: 1366px;
+    position: absolute;
+    left: -283px;
+    top: -400px;
+}
+body.impress-on-Marketing div.footer {
+    color: white;
+}
+
+#Porcelain, #Name, #End {
+    width: auto;
+}
+#Name pre {
+    padding-top: 20em;
+}
+#End .inner p:first-child {
+    font-size: 2em;
+    font-weight: bold;
+}
+#End .photo img {
+    padding-left: 1em;
+}
+blockquote.twitter-tweet {
+    width: 800px;
+}
+/* selected styles form https://dev.twitter.com/web/embedded-tweets/css */
+blockquote.twitter-tweet {
+    display: inline-block;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+/*     font-size: 12px; */
+    font-weight: bold;
+/*     line-height: 16px; */
+    border-color: #eee #ddd #bbb;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin: 10px 5px;
+    padding: 0 16px 16px 16px;
+/*     max-width: 468px; */
+}
+
+blockquote.twitter-tweet p {
+/*   font-size: 16px; */
+    font-weight: normal;
+/*   line-height: 20px; */
+}
+
+blockquote.twitter-tweet a {
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+    outline: 0 none;
+}
+
+blockquote.twitter-tweet a:hover,
+blockquote.twitter-tweet a:focus {
+    text-decoration: underline;
+}
+#Dates, #Windows-date {
+    font-size: 3em;
+    width: 1000px;
+}
+/* #Tweet { */
+/*     border: thin black solid; */
+/* } */
+#Windows p {
+    font-style: italic;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: -1.5em;
+}
+#Windows img {
+    width: 100%;
+}
+#venv {
+    text-align: center;
+    width: 1000px;
+    font-size: 2em;
+}
+body.impress-on-Sponsor div.footer {
+    background-color: white;
+    padding-left: 1ex;
+    padding-top: 1ex;
+}
+.top img {
+    vertical-align: middle;
+}
+#Future, #Workaround {
+    width: 1200px;
+}
+.dream {
+    text-align: right;
+}
+#Path {
+    font-size: 2em;
+}
+

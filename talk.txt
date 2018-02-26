@@ -1,0 +1,449 @@
+:title: pipenv
+:author: Keith Maxwell
+:description: A talk for PyBelfast
+:date: 26 February 2018
+:css: talk.css
+:skip-help: true
+:data-width: 1366
+:data-height: 768
+:data-scale: 1
+:data-perspective: 0
+
+.. |br| raw:: html
+
+   <br />
+
+.. footer::
+
+    PyBelfast, 26 Februrary 2018, Keith Maxwell
+
+----
+
+:id: Title
+
+Pipenv
+---------
+Love it, hate it
+================
+
+The “officially recommended” Python packaging tool
+
+.. note::
+
+    quotes
+    Put your hand up if this is the title of the talk you are expecting
+    Keep your hand up if:
+
+    -   you have written Python before
+    -   you have uses pip before
+    -   you have used a virtual environment before
+    -   you have used pipenv before
+
+    If you have just put your hand down, we're going 
+
+
+----
+
+:id: Overview
+:data-scale: 10
+
+
+----
+
+:id: Dates
+:data-scale: 1
+:data-x: r1600
+:data-y: r0
+
+2012-05-24 → 405
+2013-10-22 → 453
+2018-12-03 → 10
+
+.. note::
+
+    PEP 405 was approved, ``venv`` was added to 3.3_ which was released on
+    2012-09-29
+
+    PEP 453 was approved, ensurepip was included in Python 3.4_ which was
+    released on 2014-03-16
+
+    Victor Stinner talk at FOSDEM_ Python 3: 10 years later
+
+    -   from Red Hat / OpenStack
+    -   who has > 200k LOC and > 2800 commits in CPython
+
+    Pipenv supports 2.7 3.3 3.4 3.5 and 3.6
+
+----
+
+:id: venv
+
+.. code:: sh
+
+    pyvenv →  python3 -m venv
+
+.. note::
+
+    Light weight virtual environment
+
+    3.6_ depreceated the ``pyvenv`` syntax
+
+    On windows you might type something slightly differently: ``py -3 venv``
+
+    Why? Standing on the shoulders of giants, inlcuding ``pew`` a tool to
+    manage multiple virtualenvs written in pure python
+
+
+----
+
+:id: Porcelain
+
+::
+
+    GIT(1)                          Git Manual                          GIT(1)
+
+    ✂
+
+        We divide Git into high level ("porcelain") commands and low level
+        ("plumbing") commands.
+
+    ✂
+
+        Although Git includes its own porcelain layer, its low-level commands
+        are sufficient to support development of alternative porcelains.
+
+    ✂
+
+    Git 2.15.0                      11/10/2017                           GIT(1)
+
+.. note::
+
+    Managing multiple virtual environments directly can become tedious, so the
+    dependency management tutorial introduces a higher level tool, Pipenv,
+    that automatically manages a separate virtual environment for each project
+    and application that you work on.
+
+    -- https://packaging.python.org/tutorials/installing-packages/
+
+----
+
+:id: Live
+
+Live Demo
+=========
+
+::
+
+    < Thanks for the Pizza Phil >
+    =========================
+                                \
+                                \
+                                    ^__^
+                                    (oo)\_______
+                                    (__)\       )\/\
+                                        ||----w |
+                                        ||     ||
+
+.. note::
+
+    mkdir live
+    cd live
+    pipenv install cowsay
+    cat Pipfile
+    vim Pipfile.lock
+    pipenv run ./demo.py
+    pipenv shell
+    pipenv --help # to see --site-packages
+    pipenv --rm  # remove the venv
+
+----
+
+:id: Tweet
+
+.. raw:: html
+
+    <blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en"
+    dir="ltr">Pipenv is now *officially* the recommended tool on <a
+    href="https://t.co/2Sz5dS2ZV5">Python.org</a> for managing
+    application dependencies!!! ✨🍰✨ <a href="https://t.co/9XgLvsOpgZ">
+    https://packaging.python.org/tutorials/managing-dependencies/ …</a></p>
+    &mdash; Kenneth Reitz 🐍 (@kennethreitz) <a
+    href="https://twitter.com/kennethreitz/status/936239842039619584">30
+    November 2017</a></blockquote>
+
+.. note::
+
+    The first sentence on Pipenv's readthedocs_ page reads "Pipenv — the
+    officially recommended Python packaging tool from Python.org, free (as in
+    freedom).
+
+----
+
+:id: Official
+
+.. image:: assets/python-logo-generic.svg
+    :width: 100%
+
+JavaScript
+
+.. image:: assets/header-ruby-logo.png
+
+.. note::
+
+    Python.org_ → Docs → Installing Python Modules (mentioned here)
+    → Managing Application Dependencies (detail here)
+
+    https://packaging.python.org/tutorials/managing-dependencies/
+
+    Compare with Ruby:
+    ruby-lang.org_ → Libraries
+
+    https://www.ruby-lang.org/en/libraries/
+
+    Disclaimer tried a comparison with JavaScript
+
+    -   javascript.org tried to install malware
+    -   javascript.com is a for profit page, but mentions it
+
+    "Tutorials_ are opinionated step-by-step guides to help you get familiar
+    with packaging concepts."
+
+----
+
+:id: Marketing
+
+.. image:: assets/cola-truck.jpg
+
+
+----
+
+:id: Name
+
+.. code:: python
+
+    setup(
+        name='pipenv',
+        version=about['__version__'],
+        description='Python Development Workflow for Humans.',
+        long_description=long_description,
+        author='Kenneth Reitz',
+        author_email='me@kennethreitz.org',
+        url='https://github.com/pypa/pipenv',
+        packages=find_packages(exclude=['tests']),
+        entry_points={
+            'console_scripts': ['pipenv=pipenv:cli'],
+        },
+        install_requires=required,
+        include_package_data=True,
+        license='MIT',
+        classifiers=[
+            'License :: OSI Approved :: MIT License',
+            'Programming Language :: Python',
+            'Programming Language :: Python :: 2.7',
+            'Programming Language :: Python :: 3',
+            'Programming Language :: Python :: 3.3',
+            'Programming Language :: Python :: 3.4',
+            'Programming Language :: Python :: 3.5',
+            'Programming Language :: Python :: 3.6',
+            'Programming Language :: Python :: Implementation :: CPython',
+            'Programming Language :: Python :: Implementation :: PyPy'
+        ],
+        cmdclass={
+            'upload': UploadCommand,
+        },
+    )
+
+----
+
+:id: For-humans
+:data-x: r250
+:data-y: r-50
+:data-scale: 0.2
+
+
+----
+
+:id: Windows
+:data-x: r1600
+:data-y: r+50
+:data-scale: 1
+
+.. image:: assets/windows.jpg
+
+“Windows is a first–class citizen, in our world.”
+
+.. note::
+
+    Quote directly from https://github.com/pypa/pipenv
+
+    VCRUNTIME140.dll
+
+----
+
+:id: Windows-date
+:data-y: r0
+
+2012-06-20 → 397
+
+.. note::
+
+    PEP 397_
+
+    Django Girls if you are a beginner
+
+----
+
+:id: Path
+
+``C:\Windows\py.exe``
+
+
+-   ``py -3`` launches Python 3
+-   ``py -2`` launches Python 2
+-   ``py -0`` lists Pythons — |br| from Python 3.7
+
+.. note::
+
+    Needs ``python.exe``, ``pew.exe`` and ``pipenv.exe`` on the path
+
+    See the NEWS.d_ and the bug_ for details of ``-0``
+
+----
+
+:id: Workaround
+
+.. code:: python
+
+    from os import environ
+    from os.path import dirname, join
+    from subprocess import PIPE, run
+
+
+    if __name__ == '__main__':
+      result = run(
+        ('py', '-2', '-c', 'from sys import executable; print(executable)'),
+        stdout=PIPE,
+      )
+      result.check_returncode()
+      path = [environ['Path'], ]
+      for i in ('', 'Scripts'):
+          path.append('{};'.format(join(dirname(result.stdout.decode()), i)))
+      print(''.join(path))
+
+.. class:: dream
+
+``py -3 -m pipenv``
+
+----
+
+:id: Future
+
+.. code::
+
+    $ git log -1 -p 9a0aceee2f334b624f56c6b20ebeace4a8dcbeb9
+    commit 9a0aceee2f334b624f56c6b20ebeace4a8dcbeb9
+    Author: Kenneth Reitz <me@kennethreitz.org>
+    Date:   Fri Feb 23 18:20:11 2018
+
+        remove kr_easter_egg
+
+        Signed-off-by: Kenneth Reitz <me@kennethreitz.org>
+
+    diff --git a/pipenv/core.py b/pipenv/core.py
+    ✂
+    -def kr_easter_egg(package_name):
+    -    if package_name in ['requests', 'maya', 'crayons', 'delegator.py', 'r✂
+    -
+    -        # Windows built-in terminal lacks proper emoji taste.
+    -        if PIPENV_HIDE_EMOJIS:
+    -            click.echo(u'  PS: You have excellent taste!')
+    -        else:
+    -            click.echo(u'  PS: You have excellent taste! ✨ 🍰 ✨')
+    ✂
+    -        # Ego boost.
+    -        kr_easter_egg(package_name)
+    ✂
+
+.. note::
+
+    https://github.com/pypa/pipenv/pull/1266
+    Closed 2018-01-11, then fixed on Friday 2018-02-23
+
+----
+
+:id: Conclusion
+
+My conclusions
+==============
+
+.. note::
+
+    -   Optimistic, use it in places
+
+    -   for "web development" or Django girls or classic "lots of
+        dependencies" projects
+
+    -   Doesn't solve problems around binary packages need system package
+        managers or containers or own repository
+
+    -   Most of the Python packages on systems I run are handled by Ansible
+        which has a good ``pip`` module
+
+    -   I do use it on a Python 2.7 Windows, hope support becomes "first
+        class"
+
+----
+
+
+:id: Sponsor
+
+.. container:: top
+
+    .. image:: assets/OBIG.png
+
+    .. image:: assets/Phil-small.jpeg
+
+.. image:: assets/keyboard.jpeg
+
+----
+
+:id: End
+
+.. container:: photo
+
+    .. container:: inner
+
+        Discussion? Questions?
+
+        Keith Maxwell |br| keith.maxwell@gmail.com |br|
+        https://www.linkedin.com/in/ksmaxwell
+
+    .. image:: assets/End.jpg
+
+.. gm convert 3040stardustIMG_6636.jpg -geometry 30% End.jpg
+
+
+..
+    --------------------------------------------------------------------------
+
+
+.. _3.3: https://docs.python.org/3/whatsnew/3.3.html
+.. _3.4: https://docs.python.org/3/whatsnew/3.4.html
+.. _3.6: https://docs.python.org/dev/whatsnew/3.6.html
+.. _397: http://legacy.python.org/dev/peps/pep-0397/
+.. _FOSDEM: <https://fosdem.org/2018/schedule/event/python3/
+.. _readthedocs: http://pipenv.readthedocs.io/en/latest/
+.. _Python.org: https://www.python.org
+.. _ruby-lang.org: https://www.ruby-lang.org/
+.. _bug: https://bugs.python.org/issue30362
+.. _NEWS.d: https://github.com/python/cpython/blob/
+    a5293b4ff2c1b5446947b4986f98ecf5d52432d4/Misc/NEWS.d/3.7.0a1.rst#L5513
+.. _Tutorials: https://packaging.python.org/tutorials/
+
+..
+    https://www.shropshirelive.com/wp-content/uploads/2013/11/cola-truck.jpg
+    https://www.python.org/static/community_logos/python-logo-generic.svg
+    https://www.ruby-lang.org/images/header-ruby-logo.png
+    gm convert logo.png -shave 0x10 -resize 400x OBIG.png
+
+.. vim: ft=rst.hovercraft
