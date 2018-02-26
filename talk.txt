@@ -30,7 +30,8 @@ The “officially recommended” Python packaging tool
 
 .. note::
 
-    quotes
+    Have added quotes
+
     Put your hand up if this is the title of the talk you are expecting
     Keep your hand up if:
 
@@ -46,14 +47,16 @@ The “officially recommended” Python packaging tool
 
 :id: Overview
 :data-scale: 10
+:data-y: r3200
+:data-x: r3200
 
 
 ----
 
 :id: Dates
 :data-scale: 1
-:data-x: r1600
-:data-y: r0
+:data-x: r-1600
+:data-y: r-3200
 
 2012-05-24 → 405
 2013-10-22 → 453
@@ -77,6 +80,9 @@ The “officially recommended” Python packaging tool
 ----
 
 :id: venv
+:data-x: r1600
+:data-y: r0
+
 
 .. code:: sh
 
@@ -156,9 +162,22 @@ Live Demo
     pipenv --help # to see --site-packages
     pipenv --rm  # remove the venv
 
+    pipenv install --dev pipenv==10.1.0
+    pipenv graph
+
+----
+
+:id: Marketing
+:data-x: 0
+:data-y: r1600
+
+.. image:: assets/cola-truck.jpg
+
 ----
 
 :id: Tweet
+:data-x: r1600
+:data-y: r0
 
 .. raw:: html
 
@@ -210,13 +229,6 @@ JavaScript
 
 ----
 
-:id: Marketing
-
-.. image:: assets/cola-truck.jpg
-
-
-----
-
 :id: Name
 
 .. code:: python
@@ -264,8 +276,8 @@ JavaScript
 ----
 
 :id: Windows
-:data-x: r1600
-:data-y: r+50
+:data-x: 0
+:data-y: r1600
 :data-scale: 1
 
 .. image:: assets/windows.jpg
@@ -281,6 +293,7 @@ JavaScript
 ----
 
 :id: Windows-date
+:data-x: r1600
 :data-y: r0
 
 2012-06-20 → 397
@@ -337,6 +350,8 @@ JavaScript
 ----
 
 :id: Future
+:data-x: 0
+:data-y: r1600
 
 .. code::
 
@@ -372,6 +387,8 @@ JavaScript
 ----
 
 :id: Conclusion
+:data-x: r1600
+:data-y: r0
 
 My conclusions
 ==============
@@ -404,6 +421,24 @@ My conclusions
     .. image:: assets/Phil-small.jpeg
 
 .. image:: assets/keyboard.jpeg
+
+
+.. note::
+
+    Client:
+
+    -   Deloitte continueing to today
+    -   Current role at a start up, specific sector specific architecture
+        advice, having solved similar problems elsewere
+
+    Working with them as a part of the group
+
+    Doesn't have a leader as such, but talking to Phil is a good place to
+    start
+
+    Ask him what he uses this keyboard for
+
+
 
 ----
 
