@@ -477,7 +477,6 @@ Ansible
 
     .. image:: assets/End.jpg
 
-.. gm convert 3040stardustIMG_6636.jpg -geometry 30% End.jpg
 
 
 ..
@@ -502,5 +501,6 @@ Ansible
     https://www.python.org/static/community_logos/python-logo-generic.svg
     https://www.ruby-lang.org/images/header-ruby-logo.png
     gm convert logo.png -shave 0x10 -resize 400x OBIG.png
+    gm convert 3040stardustIMG_6636.jpg -geometry 30% End.jpg
 
 .. vim: ft=rst.hovercraft

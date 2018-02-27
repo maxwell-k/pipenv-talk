@@ -11,19 +11,19 @@ Install packages:
 .. code:: sh
 
     npm install -g reload
-    pip install --global hovercraft
+    pip install --global hovercraft # see Scaling below
 
 Build the presentation with:
 
 .. code:: sh
 
-    inotify.sh hovercraft talk.txt ~/.Downloads/
+    hovercraft talk.txt public
 
 In another terminal:
 
 .. code:: sh
 
-    cd ~/.Downloads && reload
+    cd public && reload
 
 Then browse to http://localhost:8080/
 
