@@ -6,6 +6,8 @@ Love it, hate it
 
 *The “officially recommended” Python packaging tool*
 
+`26 February 2018 PyBelfast`_
+
 Install packages:
 
 .. code:: sh
@@ -27,31 +29,11 @@ In another terminal:
 
 Then browse to http://localhost:8080/
 
-Scaling
--------
+The ``div#impress`` is the root element for the hovercraft presentation.
+When the browser is full screen, this will be styled with ``scale(1)`` if the
+browser is not full screen this will show a value less than 1.
 
-To get scaling to show as 1:1 when the browser window matches the configured
-size edit ``hovercraft/templates/simple/template.xsl`` to include
-``data-width`` and ``data-height`` similarly to ``data-perspective`` which was
-implemented in https://github.com/regebro/hovercraft/pull/75
+.. _26 February 2018 PyBelfast:
+    https://www.meetup.com/PyBelfast/events/247837520/
 
-.. code::
-
-      <div id="impress">
-        <xsl:if test="@data-perspective">
-          <xsl:attribute name="data-perspective">
-            <xsl:value-of select="@data-perspective" />
-          </xsl:attribute>
-        </xsl:if>
-        <xsl:if test="@data-width">
-          <xsl:attribute name="data-width">
-            <xsl:value-of select="@data-width" />
-          </xsl:attribute>
-        </xsl:if>
-        <xsl:if test="@data-height">
-          <xsl:attribute name="data-height">
-            <xsl:value-of select="@data-height" />
-          </xsl:attribute>
-        </xsl:if>
-
-.. vim: ft=rst
+.. vim: ft=rst foldmethod=manual
