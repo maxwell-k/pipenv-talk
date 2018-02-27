@@ -1,5 +1,14 @@
+image: alpine:3.7
+
 pages:
   stage: deploy
-  script: ["true",]
+  script:
+    - apk update
+    - apk add git python3 py3-lxml
+    - python3 -m pip --version
+    - "python3 -m pip install git+https://github.com/regebro/hovercraft@\
+       481f053cd5e22efda51c7ae290f2298d552dbe39"
+    - hovercraft --version
+    - hovercraft talk.txt public
   artifacts: { paths: [public,] }
-  only: [pages, ]
+  only: [master, ]
