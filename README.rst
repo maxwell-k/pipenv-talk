@@ -1,17 +1,39 @@
-Build the presentation with::
+======
+Pipenv
+======
+Love it, hate it
+----------------
+
+*The “officially recommended” Python packaging tool*
+
+Install packages:
+
+.. code:: sh
+
+    npm install -g reload
+    pip install --global hovercraft
+
+Build the presentation with:
+
+.. code:: sh
 
     inotify.sh hovercraft talk.txt ~/.Downloads/
 
-In another terminal::
+In another terminal:
+
+.. code:: sh
 
     cd ~/.Downloads && reload
 
 Then browse to http://localhost:8080/
 
-To get scaling working without problems edit
-``hovercraft/templates/simple/template.xsl`` to include ``data-width`` and
-``data-height`` similarly to ``data-perspective`` which was implemented in
-https://github.com/regebro/hovercraft/pull/75
+Scaling
+-------
+
+To get scaling to show as 1:1 when the browser window matches the configured
+size edit ``hovercraft/templates/simple/template.xsl`` to include
+``data-width`` and ``data-height`` similarly to ``data-perspective`` which was
+implemented in https://github.com/regebro/hovercraft/pull/75
 
 .. code::
 
