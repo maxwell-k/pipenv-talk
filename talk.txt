@@ -182,6 +182,10 @@ Live Demo
 
 .. image:: assets/cola-truck.jpg
 
+.. note::
+
+    shropshirelive_ 2017-11-02
+
 ----
 
 :id: Tweet
@@ -218,7 +222,8 @@ JavaScript
 
 .. note::
 
-    Python.org_ → Docs → Installing Python Modules (mentioned here)
+    Python.org_ → Docs → Installing Python Modules
+    → Python Packaging User Guide (mentioned here)
     → Managing Application Dependencies (detail here)
 
     https://packaging.python.org/tutorials/managing-dependencies/
@@ -433,7 +438,6 @@ Ansible
 
 ----
 
-
 :id: Sponsor
 
 .. container:: top
@@ -477,8 +481,17 @@ Ansible
 
     .. image:: assets/End.jpg
 
+.. note::
 
+    Discussion covered:
 
+    -   virualenvwrapper
+    -   composer, PHPs dependency manager
+    -   conda, and challenges building for that platform
+    -   operating system package managers
+    -   fpm https://github.com/jordansissel/fpm
+    -   comparisons between pip and gem are better than Pipenv and gem,
+        mention of bundler
 ..
     --------------------------------------------------------------------------
 
@@ -495,6 +508,8 @@ Ansible
 .. _NEWS.d: https://github.com/python/cpython/blob/
     a5293b4ff2c1b5446947b4986f98ecf5d52432d4/Misc/NEWS.d/3.7.0a1.rst#L5513
 .. _Tutorials: https://packaging.python.org/tutorials/
+.. _shropshirelive: https://www.shropshirelive.com/entertainment/2017/11/02/
+    coca-cola-christmas-truck-is-returning-to-telford/
 
 ..
     https://www.shropshirelive.com/wp-content/uploads/2013/11/cola-truck.jpg
