@@ -10,5 +10,6 @@ pages:
        481f053cd5e22efda51c7ae290f2298d552dbe39"
     - hovercraft --version
     - hovercraft talk.txt public
+    - ls -l public/index.html
+    - sha256sum public/index.html
   artifacts: { paths: [public,] }
-  only: [master, ]
